@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RODEO</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>RODEO</h1>
+    <div class="box">
+        <img id="image" src="RODEO.png" alt="em um fundo vermelho, homem negro em cima de um cavalo galopando em alta velocidade">
+    </div>
+    <div class="box"><img src="fly.jpg" alt="falarTexto"></div>
 
+    <script>
+        
+        function falarTexto(texto) {
+            const speech = new SpeechSynthesisUtterance(texto);
+            window.speechSynthesis.speak(speech);
+        }
+
+    
+        window.onload = function() {
+            const img = document.getElementById("RODEO.png");
+            const altText = img.alt;
+            falarTexto(altText);
+        }
+    </script>
+</body>
+</html>
